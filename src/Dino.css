@@ -1,0 +1,22 @@
+/* Dino.css */
+.dino-container {
+    width: 100%;
+    max-width: 1200px; /* Ajustez selon vos besoins pour définir une largeur maximale */
+    margin: auto;
+    padding: 20px;
+  }
+  
+  .dino-item {
+    width: 100%;
+    box-sizing: border-box; /* Inclure la largeur de la bordure et du padding dans la largeur */
+    list-style-type: none;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  
+  .dino-item strong {
+    margin-right: 5px;
+  }
+  
