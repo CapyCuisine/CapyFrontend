@@ -1,6 +1,7 @@
 // Login.js
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import './login.css'
 
 function Login({ setAuthenticated }) {
   const [email, setEmail] = useState('');
@@ -50,7 +51,7 @@ function Login({ setAuthenticated }) {
   };
 
   return (
-    <div>
+    <div className="login-container"> 
       <h2>Login</h2>
       <form onSubmit={handleSubmit}>
         <label htmlFor="email">Email:</label>
