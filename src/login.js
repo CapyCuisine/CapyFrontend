@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './login.css'
 
-function Login({ setAuthenticated }) {
+function Login({ setAuthenticated, setAuthToken }) {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const navigate = useNavigate();
@@ -20,7 +20,7 @@ function Login({ setAuthenticated }) {
     e.preventDefault();
 
     try {
-      const response = await fetch('http://localhost:3000/auth/login', {
+      const response = await fetch('https://dinoproject.onrender.com/auth/login', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -39,6 +39,8 @@ function Login({ setAuthenticated }) {
       const token = data.token;
 
       console.log('Bearer Token:', token);
+
+      setAuthToken(token);
 
       setAuthenticated(true);
 

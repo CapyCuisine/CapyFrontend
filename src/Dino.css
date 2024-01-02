@@ -1,5 +1,6 @@
-/* Dino.css */
 .dino-container {
+  display: flex;
+  flex-wrap: wrap;
   width: 100%;
   max-width: 1200px;
   margin: auto;
@@ -13,30 +14,23 @@
   margin-bottom: 20px;
   border: 1px solid #ccc;
   border-radius: 5px;
-  overflow: hidden; /* Pour clearfix le conteneur parent */
-}
-
-.dino-item strong {
-  margin-right: 5px;
+  overflow: hidden;
+  display: flex;
 }
 
 .dino-item img {
-  float: left;
-  margin-right: 10px; /* Ajustez selon vos besoins pour définir l'espace entre l'image et le texte */
-  max-width: 200px; /* Ajustez selon vos besoins pour définir la largeur maximale de l'image */
-  max-height: 200px; /* Ajustez selon vos besoins pour définir la hauteur maximale de l'image */
+  flex: 1;
+  margin-right: 10px;
+  max-width: 33%; /* 33% for the image */
+  max-height: 200px;
 }
 
 .dino-item .dino-info {
-  overflow: hidden; /* Pour éviter que le texte ne déborde sous l'image */
-}
-
-/* Style pour placer les informations à droite de l'image */
-.dino-item .dino-info {
-  overflow: hidden; /* Pour éviter que le texte ne déborde sous l'image */
+  flex: 2;
+  overflow: hidden;
 }
 
 .dino-item .dino-info strong {
-  display: block; /* Chaque information sur une nouvelle ligne */
-  margin-bottom: 5px; /* Espacement entre les informations */
+  display: block;
+  margin-bottom: 5px;
 }
