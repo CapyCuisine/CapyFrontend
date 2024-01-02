@@ -7,7 +7,7 @@ const Dino = () => {
 
   useEffect(() => {
     // Fetch dinosaur data
-    fetch('http://localhost:3000/api/dinosaurs')
+    fetch('https://dinoproject.onrender.com/api/dinosaurs')
       .then(response => response.json())
       .then(data => setData(data))
       .catch(error => console.error('Error fetching data:', error));
@@ -15,7 +15,7 @@ const Dino = () => {
 
   return (
     <div className="dino-container">
-            <h2>Dinosaur Data</h2>
+            <h2>Les dinosaures</h2>
       {data.map(dino => (
         <div key={dino.id} className="dino-item">
           <div className="dino-info">

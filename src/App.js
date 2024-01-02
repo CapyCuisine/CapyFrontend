@@ -7,10 +7,13 @@ import Dino from './Dino';
 import Navbar from './Navbar';
 import Login from './login';
 import Admin from './admin';
+import Biome from './Biome';
 
 
 function App() {
   const [authenticated, setAuthenticated] = useState(false);
+
+  const [authToken, setAuthToken] = useState('');
 
   useEffect(() => {
     // Placez votre logique useEffect ici si nécessaire
@@ -26,10 +29,12 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/Dino" element={<Dino />} />
-            <Route path="/login" element={<Login setAuthenticated={setAuthenticated} />} />
+            <Route path="/Biome" element={<Biome />} />
+
+            <Route path="/login" element={<Login setAuthenticated={setAuthenticated} setAuthToken={setAuthToken}/>} />
             <Route
             path="/admin"
-            element={authenticated ? <Admin /> : <Navigate to="/login" />}
+            element={authenticated ? <Admin authToken={authToken}/> : <Navigate to="/login" />}
             />
           </Routes>
         </main>
