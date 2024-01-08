@@ -11,12 +11,6 @@ function Navbar() {
           <Link to="/">Home</Link>
         </li>
         <li className="nav-item">
-          <Link to="/Dino">Dino</Link>
-        </li>
-        <li className="nav-item">
-          <Link to="/biome">Biome</Link>
-        </li>
-        <li className="nav-item">
           <Link to="/login">Se connecter</Link>
         </li>
       </ul>

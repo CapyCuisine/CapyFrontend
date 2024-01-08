@@ -3,11 +3,9 @@ import React, { useEffect, useState } from 'react';
 import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
 import './App.css';
 import Home from './Home';
-import Dino from './Dino';
 import Navbar from './Navbar';
 import Login from './login';
 import Admin from './admin';
-import Biome from './Biome';
 
 
 function App() {
@@ -28,8 +26,6 @@ function App() {
         <main>
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/Dino" element={<Dino />} />
-            <Route path="/Biome" element={<Biome />} />
 
             <Route path="/login" element={<Login setAuthenticated={setAuthenticated} setAuthToken={setAuthToken}/>} />
             <Route
