@@ -1,5 +1,5 @@
 // Login.js
-import '/CapyCuisineFront/src/styles/login.css'
+import '../styles/login.css'
 
 function Login() {
   
