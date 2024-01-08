@@ -5,13 +5,9 @@ import './App.css';
 import Home from './pages/Home';
 import Navbar from './components/Navbar';
 import Login from './pages/login';
-import Admin from './pages/admin';
 
 
 function App() {
-  const [authenticated, setAuthenticated] = useState(false);
-
-  const [authToken, setAuthToken] = useState('');
 
   useEffect(() => {
   }, []);
