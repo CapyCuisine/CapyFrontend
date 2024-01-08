@@ -2,10 +2,10 @@
 import React, { useEffect, useState } from 'react';
 import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
 import './App.css';
-import Home from './Home';
-import Navbar from './Navbar';
-import Login from './login';
-import Admin from './admin';
+import Home from './pages/Home';
+import Navbar from './components/Navbar';
+import Login from './pages/login';
+import Admin from './pages/admin';
 
 
 function App() {
@@ -14,7 +14,6 @@ function App() {
   const [authToken, setAuthToken] = useState('');
 
   useEffect(() => {
-    // Placez votre logique useEffect ici si nécessaire
   }, []);
 
   return (
@@ -27,11 +26,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
 
-            <Route path="/login" element={<Login setAuthenticated={setAuthenticated} setAuthToken={setAuthToken}/>} />
-            <Route
-            path="/admin"
-            element={authenticated ? <Admin authToken={authToken}/> : <Navigate to="/login" />}
-            />
+            <Route path="/login" element={<Login/>} />
           </Routes>
         </main>
       </div>
