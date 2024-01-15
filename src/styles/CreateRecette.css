@@ -1,0 +1,8 @@
+.create-recette-form{
+    width: 80%;
+}
+
+.create-recette-container {
+    display: flex;
+    justify-content: space-between;  
+}
