@@ -8,10 +8,16 @@ function Navbar() {
     <nav className="navbar">
       <ul className="nav-list">
         <li className="nav-item">
-          <Link to="/">Home</Link>
+          <Link to="/">Accueil</Link>
         </li>
         <li className="nav-item">
-          <Link to="/login">Se connecter</Link>
+          <Link to="/categories">Catégories</Link>
+        </li>
+        <li className="nav-item">
+          <Link to="/propos">A propos</Link>
+        </li>
+        <li className="nav-item">
+          <Link to="/contact">Contact</Link>
         </li>
       </ul>
     </nav>

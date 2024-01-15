@@ -4,7 +4,9 @@ import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-d
 import './App.css';
 import Home from './pages/Home';
 import Navbar from './components/Navbar';
-import Login from './pages/login';
+import Categories from './pages/categories';
+import Propos from './pages/propos';
+import Contact from './pages/contact';
 
 
 function App() {
@@ -22,7 +24,12 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
 
-            <Route path="/login" element={<Login/>} />
+            <Route path="/categories" element={<Categories/>} />
+
+            <Route path="/propos" element={<Propos/>} />
+
+            <Route path="/contact" element={<Contact/>} />
+
           </Routes>
         </main>
       </div>
