@@ -1,4 +1,4 @@
-const Admin = () => {
+const Propos = () => {
 
   return (
     <div>
@@ -7,4 +7,4 @@ const Admin = () => {
   );
 };
 
-export default Admin;
+export default Propos;

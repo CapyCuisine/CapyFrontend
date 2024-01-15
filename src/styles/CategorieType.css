@@ -1,0 +1,18 @@
+
+.categorie-type {
+    border: 2px solid #ddd; 
+    padding: 10px; 
+    margin: 10px; 
+    text-align: center; 
+    background-color: #f9f9f9; 
+    display: inline-block; 
+    width: 45%; 
+    box-sizing: border-box;
+    border-radius: 10px; 
+  }
+  
+  .categorie-type div {
+    font-weight: bold; 
+    color: #333;
+  }
+  

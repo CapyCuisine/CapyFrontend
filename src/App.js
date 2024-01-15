@@ -30,6 +30,9 @@ function App() {
 
             <Route path="/contact" element={<Contact/>} />
 
+            <Route path="/propos" element={<Propos/>} />
+
+
           </Routes>
         </main>
       </div>
