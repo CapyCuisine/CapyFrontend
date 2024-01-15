@@ -2,7 +2,7 @@
 import logo from '../styles/logo.svg';
 
 
-const Dino = () => {
+const Home = () => {
 
   return (
     <div>
@@ -12,4 +12,4 @@ const Dino = () => {
   );
 };
 
-export default Dino;
+export default Home;
