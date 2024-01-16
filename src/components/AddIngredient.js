@@ -1,3 +1,5 @@
+// AddIngredient.js
+
 import React, { useState } from 'react';
 import '../styles/AddIngredient.css';
 
@@ -16,6 +18,12 @@ const AddIngredient = () => {
     }
   };
 
+  const handleDeleteIngredient = (index) => {
+    const updatedList = [...ingredientList];
+    updatedList.splice(index, 1);
+    setIngredientList(updatedList);
+  };
+
   return (
     <div className="add-ingredient-container">
       <input
@@ -29,9 +37,12 @@ const AddIngredient = () => {
         +
       </button>
       <div className="ingredient-list">
-        {ingredientList.map((ing, index) => (
-          <div key={index} className="ingredient-item">
-            {ing}
+        {ingredientList.map((ing, index) => ( 
+          <div key={index} className="ingredient-container">
+            <span className="ingredient-item">{ing}</span>
+            <button onClick={() => handleDeleteIngredient(index)} className="delete-button">
+              -
+            </button>
           </div>
         ))}
       </div>
