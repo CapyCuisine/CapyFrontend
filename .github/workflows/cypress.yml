@@ -23,7 +23,15 @@ jobs:
           unzip ngrok-stable-linux-amd64.zip
 
       - name: Start ngrok and expose port 3000
-        run: ./ngrok http 3000 & sleep 10
+        run: |
+          ./ngrok http 3000 > /dev/null 2>&1 &
+          sleep 10
+
+      - name: Display ngrok output
+        run: cat ngrok.log
+
+      - name: Check ngrok status
+        run: curl -s http://localhost:4040/api/tunnels | jq '.tunnels[0].public_url'
 
       - name: Run Cypress tests
         run: npm run cypress:run
