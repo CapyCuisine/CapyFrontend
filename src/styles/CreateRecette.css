@@ -1,8 +1,26 @@
-.create-recette-form{
+.create-recette-form {
     width: 80%;
-}
-
-.create-recette-container {
     display: flex;
-    justify-content: space-between;  
-}
+    flex-direction: column;
+    gap: 10px;
+    border-right: 1px solid #555;
+  }
+  
+  .create-recette-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  
+  label {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  label > input,
+  label > textarea {
+    width: 90%;
+    margin-top: 5px; 
+  }
+  
