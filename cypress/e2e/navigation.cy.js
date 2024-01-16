@@ -1,7 +1,7 @@
 describe('Navigation Tests', () => {
   it('should navigate to Accueil', () => {
     cy.visit('http://localhost:3000');
-    cy.contains('Page Home');
+    cy.contains('Nos dernières recettes');
     cy.contains('Accueil');
     cy.contains('Catégories');
     cy.contains('A propos');
@@ -37,7 +37,7 @@ describe('Navigation Tests', () => {
 
   it('should return to Accueil', () => {
     cy.visit('http://localhost:3000');
-    cy.contains('Page Home');
+    cy.contains('Nos dernières recettes');
     cy.contains('Accueil');
     cy.contains('Catégories');
     cy.contains('A propos');
