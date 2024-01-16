@@ -7,31 +7,20 @@ on:
       - dev
 
 jobs:
-  test:
-    runs-on: ubuntu-latest
-
+  cypress-run:
+    runs-on: ubuntu-22.04
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
+      - name: Checkout
+        uses: actions/checkout@v3
 
-      - name: Install dependencies
-        run: npm install
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18.18.0'
 
-      - name: Install ngrok
-        run: |
-          wget https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip
-          unzip ngrok-stable-linux-amd64.zip
-
-      - name: Start ngrok and expose port 3000
-        run: |
-          ./ngrok http 3000 > /dev/null 2>&1 &
-          sleep 10
-
-      - name: Display ngrok output
-        run: cat ngrok.log
-
-      - name: Check ngrok status
-        run: curl -s http://localhost:4040/api/tunnels | jq '.tunnels[0].public_url'
-
-      - name: Run Cypress tests
-        run: npm run cypress:run
+      - name: Cypress run
+        uses: cypress-io/github-action@v5
+        with:
+          start: ''
+          browser: chrome
+          wait-on: 'http://localhost:3000'
