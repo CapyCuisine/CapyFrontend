@@ -18,13 +18,9 @@ jobs:
         with:
           node-version: '18.18.0'
 
-      - name: Test server connection
-        run: curl -I http://localhost:3000/en
-
       - name: Cypress run
         uses: cypress-io/github-action@v5
         with:
           start: ''
           browser: chrome
-          wait-on: 'http://localhost:3000/en'
-          wait-on-timeout: 120
+          wait-on: 'http://[::1]:3000'
