@@ -1,8 +1,9 @@
 import React from 'react';
+import SearchRecette from './SearchRecette';
 
 const EditRecette = () => {
   return (
-    <p>test</p>
+    <SearchRecette/>
   )
 
 };
