@@ -1,0 +1,10 @@
+.input-container {
+    display: flex;
+    align-items: center;
+}
+
+.search-button {
+    height: 38px;
+    margin-top: 6px;
+}
+

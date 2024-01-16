@@ -7,6 +7,7 @@ import Navbar from './components/Navbar';
 import Categories from './pages/categories';
 import Propos from './pages/propos';
 import Contact from './pages/contact';
+import Admin from './pages/admin';
 
 
 function App() {
@@ -31,6 +32,9 @@ function App() {
             <Route path="/contact" element={<Contact/>} />
 
             <Route path="/propos" element={<Propos/>} />
+
+            <Route path="/admin" element={<Admin/>} />
+
 
 
           </Routes>
