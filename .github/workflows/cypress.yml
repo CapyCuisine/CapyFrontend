@@ -23,7 +23,7 @@ jobs:
           unzip ngrok-stable-linux-amd64.zip
 
       - name: Start ngrok and expose port 3000
-        run: ./ngrok http 3000 &
+        run: ./ngrok http 3000 & sleep 10
 
       - name: Run Cypress tests
         run: npm run cypress:run
