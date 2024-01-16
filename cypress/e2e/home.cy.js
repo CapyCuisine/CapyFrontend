@@ -1,6 +1,6 @@
 describe('My React App Tests', () => {
   it('should load the homepage', () => {
-    cy.visit('http://localhost:4040');
+    cy.visit('http://localhost:3000');
     cy.contains('Page Home');
     cy.contains('Accueil');
     cy.contains('Contact');
