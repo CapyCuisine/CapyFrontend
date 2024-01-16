@@ -19,8 +19,8 @@ jobs:
           node-version: '18.18.0'
 
       - name: Cypress run
+      - name: Test
         uses: cypress-io/github-action@v5
         with:
-          start: ''
-          browser: chrome
+          start: npm start
           wait-on: 'http://[::1]:3000'
