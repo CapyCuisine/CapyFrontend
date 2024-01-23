@@ -1,6 +1,8 @@
 version: '3'
 services:
   react-docker:
+    networks:
+      - capynetwork
     container_name: react-docker
     build:
       context: ./
@@ -10,3 +12,7 @@ services:
     volumes:
        - ./react-docker:/usr/src/app/react-docker
        - /usr/src/app/react-docker/node_modules
+
+networks:
+  capynetwork:
+    driver: bridge
