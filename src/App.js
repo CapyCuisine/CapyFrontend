@@ -8,6 +8,7 @@ import Categories from './pages/categories';
 import Propos from './pages/propos';
 import Contact from './pages/contact';
 import Admin from './pages/admin';
+import Login from './pages/login';
 
 
 function App() {
@@ -35,6 +36,7 @@ function App() {
 
             <Route path="/admin" element={<Admin/>} />
 
+            <Route path="/login" element={<Login/>} />
 
 
           </Routes>
